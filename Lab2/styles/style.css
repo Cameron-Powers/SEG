@@ -35,3 +35,28 @@
   border: 1px solid #ccc;
   border-top: none;
 }
+
+body {
+  color: white;
+}
+
+h1 {
+  background-color: black;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+  color: white; 
+  font-size: 64px;
+}
+
+footer {
+    margin-top: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
