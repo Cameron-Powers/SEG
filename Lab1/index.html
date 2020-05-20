@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> User Interface Survey </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="title">
+		<h1> User Interface Survey </h1>
+		<h2> Website: <a href="https://protege-secure.csnpe-nslsc.canada.ca/en/secure/dashboard"> National Student Loans Service Center </a></h2>
+	</div>
+
+	<div id="survey">
+		<a href="https://protege-secure.csnpe-nslsc.canada.ca/en/secure/dashboard" id="pic">
+			<img src="images/NSLSC_UI.png" alt="NSLSC Dashboard">
+		</a>
+
+		<form>
+			<label for="q1">Q1: Do you think this UI is appealing? Why or why not?</label> <br>
+			<input type="text" name="q1"> <br><br>
+
+			<label for="q2">Q2 :Is this UI efficient to use?</label> <br>
+			<input type="radio" name="q2" value="yes">
+			<label for="yes"> Yes </label> <br>
+			<input type="radio" name="q2" value="no">
+			<label for="no"> No </label> <br><br>
+
+			<label for="q3">Q3: Which Drop Down menu would you look in for "How To Apply"?</label> <br>
+			<input type="checkbox" name="PYE" value="Plan Your Education">
+  			<label for="PYE"> Plan Your Education</label><br>
+  			<input type="checkbox" name="MYM" value="Managing Your Money">
+  			<label for="MYM"> Managing Your Money</label><br>
+  			<input type="checkbox" name="MAL" value="Manage A Loan">
+  			<label for="MAL"> Manage A Loan</label><br>
+  			<input type="checkbox" name="LRO" value="Loan Repayment Options">
+  			<label for="LRO"> Loan Repayment Options</label><br><br>
+
+			<label for="q4">Q4: How would you describe the UI in a word?</label> <br>
+			<select id="q4" name="q4">
+				<option value="Clunky">Clunky</option>
+				<option value="Professional">Professional</option>
+				<option value="Disgusting">Disgusting</option>
+				<option value="Clear">Clear</option>
+			</select> <br> <br>
+
+			<label for="q5">Q5: Does the UI feel Crowded?</label> <br>
+			<input type="radio" name="q5" value="yes">
+			<label for="yes"> Yes </label> <br>
+			<input type="radio" name="q5" value="no">
+			<label for="no"> No </label> <br> <br>
+
+			<label for="q6">Q6: How comfortable do you feel using this UI?</label> <br>
+			<ul class="likert">
+				<li> UnComfortable <input type="range" min="1" max="10" value="5" name="q6"> Very Comfortable </li>
+			</ul> 
+
+			<p> Comments: </p>
+			<textarea rows="4" cols="50" name="comment" form="usrform"> Enter addtional comments here...</textarea> <br>
+
+			<input type="submit" value="Submit Survey">
+			<input type="reset">
+		</form>
+	</div>
+	
+	<footer>
+		<p>Website Designed By: Cameron Powers </p>
+		<p>Student Number: 300063231 </p>
+	</footer>	
+</body>
+</html>
