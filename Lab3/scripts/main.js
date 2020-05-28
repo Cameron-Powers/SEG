@@ -28,50 +28,30 @@ function openInfo(evt, tabName) {
 // it makes each product name as the label for the checkbos
 
 function populateListProductChoices(slct1, slct2) {
-    var s1 = document.getElementById(slct1); //gluten free
-    var s2 = document.getElementById(slct2); //display
+    var s1 = document.getElementById(slct1);
+    var s2 = document.getElementById(slct2);
 	
-	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
+	
     s2.innerHTML = "";
 		
-	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value)[0];
-    // obtain price list
-    var priceArray = restrictListProducts(products, s1.value)[1];
-    
-    // combine lists
-    var combinedArray = [];
+	
+    var optionArray = restrictListProducts(products, s1.value);
 
-    for (i=0; i < optionArray.length; i++){
-		combinedArray[i] = combinedArray[i] = [optionArray[i],priceArray[i]]
-	}
-	combinedArray.sort(priceSort)
-
-
-	// for each item in the array, create a checkbox element, each containing information such as:
-	// <input type="checkbox" name="product" value="Bread">
-	// <label for="Bread">Bread/label><br>
-
+		
 	for (i = 0; i < optionArray.length; i++) {
-		var productName = combinedArray[i[0]];
-		var productPrice = combinedArray[i[1]];
-		var output = [productName, productPrice];
-
-		var productName = optionArray[i];
-		var productPrice = priceArray[i];
-		var output = [productName, productPrice];
 			
+		var productName = optionArray[i];
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
-		checkbox.value = output;
+		checkbox.value = productName;
 		s2.appendChild(checkbox);
 		
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
-		label.htmlFor = output;
-		label.appendChild(document.createTextNode(output));
+		label.htmlFor = productName;
+		label.appendChild(document.createTextNode(productName));
 		s2.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM
@@ -87,11 +67,11 @@ function selectedItems(){
 	
 	var ele = document.getElementsByName("product");
 	var chosenProducts = [];
-	
+	var organic = document.getElementById('organic');
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
 	
-	// build list of selected item
+	//Build a list of selected items
 	var para = document.createElement("P");
 	para.innerHTML = "You selected : ";
 	para.appendChild(document.createElement("br"));
@@ -103,18 +83,20 @@ function selectedItems(){
 		}
 	}
 		
-	// add paragraph and total price
+	// Add the paragraph and price number at the bottom of the Page
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
-		
+	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts).toFixed(2)));
 }
 
-function priceSort(num1, num2) { //Function inspired by https://stackoverflow.com/questions/16096872/how-to-sort-2-dimensional-array-by-column-value
-    if (num1[0] === num2[0]) {
-        return 0;
-    }
-    else {
-        return (num1[0] < num2[0]) ? -1 : 1;
-    }
+function show_image(src, width, height, alt) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    img.alt = alt;
+
+    // This next line will just add it to the <body> tag
+    document.body.appendChild(img);
 }
+
 
