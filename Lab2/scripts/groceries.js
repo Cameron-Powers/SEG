@@ -4,63 +4,63 @@
 
 var products = [
 	{
-		name:"Beer",
+		name:"Beer $12.99",
 		vegetarian: true,
 		glutenFree: false,
 		price: 12.99,
 		organic: false
 	},
 	{
-		name:"Steak",
+		name:"Steak $10.99",
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.99,
 		organic: false
 	},
 	{
-		name: "Cod",
+		name: "Cod 10.99",
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.99,
 		organic: false
 	},
 	{
-		name:"Pork",
+		name:"Pork 8.99",
 		vegetarian: false,
 		glutenFree: true,
 		price: 8.99,
 		organic: false
 	},
 	{
-		name:"Naan",
+		name:"Naan 4.99",
 		vegetarian: true,
 		glutenFree: false,
 		price: 4.99,
 		organic: false
 	},
 	{
-		name: "Burger Buns",
+		name: "Burger Buns 2.99",
 		vegetarian: true,
 		glutenFree: false,
 		price: 2.99,
 		organic: false
 	},
 	{
-		name: "Cucumber",
+		name: "Cucumber 1.99",
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.99,
 		organic: true
 	},
 	{
-		name:"Carrot",
+		name:"Carrot 1.59",
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.59,
 		organic: true
 	},
 	{
-		name:"Corn",
+		name:"Corn 0.99",
 		vegetarian: true,
 		glutenFree: true,
 		price: 0.99,
@@ -76,35 +76,29 @@ var products = [
 
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
-	let product_prices = [];
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
 			product_names.push(prods[i].name);
-			product_prices.push(prods[i].price);
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
 			product_names.push(prods[i].name);
-			product_prices.push(prods[i].price);
 		}
 		else if ((restriction == "Both") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)){
 			product_names.push(prods[i].name);
-			product_prices.push(prods[i].price);
 		}
 		else if ((restriction == "Organic") && (prods[i].organic == true)){
 			product_names.push(prods[i].name);
-			product_prices.push(prods[i].price);
 		}
 		else if (restriction == "None"){
 			product_names.push(prods[i].name);
-			product_prices.push(prods[i].price);
 		}
 	}
-	return [product_names,product_prices];
+	return product_names;
 }
 
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
-	totalPrice = 0;
+	totalPrice = 0;	
 	for (let i=0; i<products.length; i+=1) {
 		if (chosenProducts.indexOf(products[i].name) > -1){
 			totalPrice += products[i].price;
