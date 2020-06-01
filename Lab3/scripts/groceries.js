@@ -4,63 +4,63 @@
 
 var products = [
 	{
-		name:"Beer $12.99",
+		name:"Other: Beer $12.99",
 		vegetarian: true,
 		glutenFree: false,
 		price: 12.99,
 		organic: false
 	},
 	{
-		name:"Steak $10.99",
+		name:"Meat: Steak $10.99",
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.99,
 		organic: false
 	},
 	{
-		name: "Cod 10.99",
+		name: "Meat: Cod 10.99",
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.99,
 		organic: false
 	},
 	{
-		name:"Pork 8.99",
+		name:"Meat: Pork 8.99",
 		vegetarian: false,
 		glutenFree: true,
 		price: 8.99,
 		organic: false
 	},
 	{
-		name:"Naan 4.99",
+		name:"Bakery: Naan 4.99",
 		vegetarian: true,
 		glutenFree: false,
 		price: 4.99,
 		organic: false
 	},
 	{
-		name: "Burger Buns 2.99",
+		name: "Bakery: Burger Buns 2.99",
 		vegetarian: true,
 		glutenFree: false,
 		price: 2.99,
 		organic: false
 	},
 	{
-		name: "Cucumber 1.99",
+		name: "Produce: Cucumber 1.99",
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.99,
 		organic: true
 	},
 	{
-		name:"Carrot 1.59",
+		name:"Produce: Carrot 1.59",
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.59,
 		organic: true
 	},
 	{
-		name:"Corn 0.99",
+		name:"Produce: Corn 0.99",
 		vegetarian: true,
 		glutenFree: true,
 		price: 0.99,
