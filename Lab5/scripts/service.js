@@ -121,9 +121,11 @@ $(document).ready(function(){
     };
 
 
+
     $("#dateInput").datepicker(
         {
         beforeShowDay: function(date) {
+
             var show = true;
             if(date.getDay()== dayOff2) show= false
             if(date.getDay()== dayOff1) show= false
