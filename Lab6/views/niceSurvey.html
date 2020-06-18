@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  </head> 
+  
+  <style>
+    body {
+      background-image: linear-gradient(red, yellow);
+      text-align: center;
+    }
+
+    .container {
+      background-color: firebrick;
+      color: floralwhite;
+      border: 5px solid black;
+    }
+
+    .likert li{
+	    float: center;
+      list-style-type: none;
+    }
+  </style>
+  
+  <body text-align="center">
+	<div class="container p-3 my-3">
+    <h1> UI Survey </h1>
+    <div id="surveyArea">
+
+      <a href="https://protege-secure.csnpe-nslsc.canada.ca/en/secure/dashboard" id="pic">
+        <img src="NSLSC_UI.png" alt="NSLSC Dashboard" width="650px" height="500px" text-align="center">
+      </a>
+
+      <form method="POST" action="/niceSurvey">
+        <label for="q1">Q1: On a scale of 1-5, how appealing is this UI?</label> <br>
+        <input type="text" name="q1"> <br><br>
+  
+        <label for="q2">Q2: Is this UI efficient to use?</label> <br>
+        <input type="radio" name="q2" value="yes">
+        <label for="yes"> Yes </label> <br>
+        <input type="radio" name="q2" value="no">
+        <label for="no"> No </label> <br><br>
+  
+        <label for="q3">Q3: Which Drop Down menu would you look in for "How To Apply"?</label> <br>
+          <input type="checkbox" name="q3" value="Plan Your Education">
+          <label for="q3">Plan Your Education</label><br>
+          <input type="checkbox" name="q3" value="Managing Your Money">
+          <label for="q3">Managing Your Money</label><br>
+          <input type="checkbox" name="q3" value="Manage A Loan">
+          <label for="q3">Manage A Loan</label><br>
+          <input type="checkbox" name="q3" value="Loan Repayment Options">
+          <label for="q3">Loan Repayment Options</label><br><br>
+  
+        <label for="q4">Q4: How would you describe the UI in a word?</label> <br>
+        <select id="q4" name="q4">
+          <option value="Clunky">Clunky</option>
+          <option value="Professional">Professional</option>
+          <option value="Disgusting">Disgusting</option>
+          <option value="Clear">Clear</option>
+        </select> <br> <br>
+
+        <label for="q5">Q5: Does the UI feel Crowded?</label> <br>
+        <input type="radio" name="q5" value="yes">
+        <label for="yes"> Yes </label> <br>
+        <input type="radio" name="q5" value="no">
+        <label for="no"> No </label> <br> <br>
+  
+        <label for="q6">Q6: How comfortable do you feel using this UI?</label> <br>
+        <ul class="likert">
+          <li> UnComfortable <input type="range" min="1" max="5" value="1" name="q6"> Very Comfortable </li>
+        </ul>
+        <br>
+  
+      <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+      <p id="thanks"></p>
+      </form>
+
+
+
+    </div>
+    </div>
+	<script src="/assets/action.js"></script>
+  </body>
+</html> 
