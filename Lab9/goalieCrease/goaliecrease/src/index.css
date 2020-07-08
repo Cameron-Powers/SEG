@@ -1,0 +1,185 @@
+.middle {
+  padding: 10px;
+  text-align: center;
+}
+
+.middleButtons {
+  margin-top: 20px;
+  background-color: rgb(197,66,67);
+  border: 10px solid black;
+  width: 50%;
+  margin: 0 auto;
+  
+}
+
+.buttons {
+  margin: 7px;
+}
+
+.card {
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.card-columns {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input {
+  margin: 10px;;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(197,66,67);
+  border: 10px solid black;
+  color: black;
+  text-align: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html, body {
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+}
+
+.table {
+  display:table;
+  width:100%;
+  height:100%;
+  border:0px;
+}
+
+.row1, .row2, .row3 {
+  display:table-row;
+  height:100%;
+}
+.cell1, .cell2, .cell3 {
+  padding-left:10px;
+  padding-top: 30px;
+  padding-right: 10px;
+  display:table-cell;
+  width:33%;
+  height:100%;
+  border:0px solid #CCC;
+  height:auto;
+}
+
+button:focus {     
+  background-color: rgb(197,66,67);    
+}
+
+h4{
+  padding:0px;
+}
+
+h2, h3 {
+  color: black;
+}
+
+body {
+  font-family: "Lucida Console", Courier, monospace;
+  background-image: url(./images/bg.jpg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.colour {
+  color: black;
+}
+
+.bg {
+  background-color: rgb(197,66,67);
+}
+
+
+.text {
+  color: black;
+}
+
+.jumbotron{
+  background-color: rgb(197,66,67);
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+nav {
+  border: 10px solid black;
+}
+
+.nav-item {
+  padding-right: 40px;
+  padding-left: 50px;
+  font-size: 30px;
+}
+
+.icon {
+  margin: 7px; 
+}
+
+.margin {
+  margin-top: 10px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+container.input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+container.input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+container.input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
